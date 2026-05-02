@@ -76,7 +76,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-r from-ytm-lavender dark:from-ytm-dark via-transparent to-transparent" />
         </div>
 
-        <div className="relative z-10 w-full section-padding py-32 lg:py-0">
+        <div className="relative z-10 w-full section-padding pt-32 pb-16 lg:pt-40 lg:pb-24">
           <div className="max-w-3xl">
             <motion.div
               initial={{ opacity: 0, y: 40 }}
