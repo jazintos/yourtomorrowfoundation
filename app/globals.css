@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+:root {
+--background: 0 0% 100%;
+--foreground: 222 47% 11%;
+--card: 0 0% 100%;
+--card-foreground: 222 47% 11%;
+--popover: 0 0% 100%;
+--popover-foreground: 222 47% 11%;
+--primary: 218 54% 45%;
+--primary-foreground: 0 0% 100%;
+--secondary: 88 45% 64%;
+--secondary-foreground: 222 47% 11%;
+--muted: 250 20% 96%;
+--muted-foreground: 215 16% 47%;
+--accent: 290 25% 72%;
+--accent-foreground: 222 47% 11%;
+--destructive: 0 84.2% 60.2%;
+--destructive-foreground: 0 0% 98%;
+--border: 214 32% 91%;
+--input: 214 32% 91%;
+--ring: 218 54% 45%;
+--radius: 0.625rem;
+}
+
+.dark {
+--background: 222 47% 11%;
+--foreground: 0 0% 98%;
+--card: 222 47% 15%;
+--card-foreground: 0 0% 98%;
+--popover: 222 47% 15%;
+--popover-foreground: 0 0% 98%;
+--primary: 88 45% 64%;
+--primary-foreground: 222 47% 11%;
+--secondary: 218 54% 45%;
+--secondary-foreground: 0 0% 100%;
+--muted: 222 30% 20%;
+--muted-foreground: 215 16% 65%;
+--accent: 290 25% 60%;
+--accent-foreground: 0 0% 98%;
+--destructive: 0 62.8% 30.6%;
+--destructive-foreground: 0 0% 98%;
+--border: 222 30% 20%;
+--input: 222 30% 20%;
+--ring: 88 45% 64%;
+}
+}
+
+@layer base {
+html {
+scroll-behavior: smooth;
+}
+
+body {
+@apply bg-background text-foreground font-sans antialiased;
+font-feature-settings: "rlig" 1, "calt" 1;
+}
+
+h1, h2, h3, h4, h5, h6 {
+@apply font-bold tracking-tight;
+}
+}
+
+@layer utilities {
+.text-balance {
+text-wrap: balance;
+}
+
+.gradient-blue-green {
+background: linear-gradient(135deg, #3766B0 0%, #14B8A6 50%, #A9D173 100%);
+}
+
+.gradient-lavender-cyan {
+background: linear-gradient(135deg, #EDE9FE 0%, #A78BFA 30%, #22D3EE 100%);
+}
+
+.gradient-hero {
+background: linear-gradient(135deg, #3766B0 0%, #AC7DB6 50%, #C7A5CD 100%);
+}
+
+.pill-btn {
+@apply inline-flex items-center justify-center px-6 py-3 rounded-full font-medium transition-all duration-300;
+}
+
+.pill-btn-primary {
+@apply pill-btn bg-ytm-blue text-white hover:bg-ytm-blue/90 hover:scale-105 shadow-lg;
+}
+
+.pill-btn-outline {
+@apply pill-btn border-2 border-ytm-teal text-ytm-teal hover:bg-ytm-teal hover:text-white;
+}
+
+.pill-btn-green {
+@apply pill-btn bg-ytm-green text-ytm-dark hover:bg-ytm-green/90 hover:scale-105 shadow-lg;
+}
+
+.glass-card {
+@apply bg-white/80 backdrop-blur-xl border border-white/20 rounded-2xl shadow-xl;
+}
+
+.dark .glass-card {
+@apply bg-white/5 border-white/10;
+}
+
+.section-padding {
+@apply px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24;
+}
+
+.text-gradient {
+@apply bg-clip-text text-transparent bg-gradient-to-r from-ytm-blue via-ytm-purple to-ytm-teal;
+}
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+width: 8px;
+height: 8px;
+}
+::-webkit-scrollbar-thumb {
+background: #C7A5CD;
+border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #AC7DB6;
+}
+
+/* Animations */
+@keyframes float {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-10px); }
+}
+
+@keyframes pulse-soft {
+0%, 100% { opacity: 1; }
+50% { opacity: 0.7; }
+}
+
+.animate-float {
+animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+animation: pulse-soft 2s ease-in-out infinite;
+}
