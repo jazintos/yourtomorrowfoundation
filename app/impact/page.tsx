@@ -7,6 +7,7 @@ import {
   Wrench, Handshake, Target, ArrowRight, Star, Users, Zap, BarChart3
 } from 'lucide-react'
 import Link from 'next/link'
+import SEO from '@/components/SEO'
 
 
 const fadeInUp = {
@@ -131,10 +132,10 @@ const successFactors = [
 export default function Impact() {
   return (
     <>
-      
-        title="Impact"
-        description="See how Your Tomorrow Foundation is making a measurable difference across Nigeria through feeding programmes, education support, youth skills training, and community partnerships."
-      /
+    <SEO
+      title="Impact"
+      description="See how Your Tomorrow Foundation is making a measurable difference across Nigeria through feeding programmes, education support, youth skills training, and community partnerships."
+    />
 
       {/* ===== HERO ===== */}
       <section className="relative pt-32 pb-20 lg:pb-32 overflow-hidden">
