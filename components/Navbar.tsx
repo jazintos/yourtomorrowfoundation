@@ -55,8 +55,7 @@ export default function Navbar() {
               <img
                 src="/images/YTM_MAIN_LOGO_FULL_COLOR.png"
                 alt="Your Tomorrow Foundation"
-                className="h-12 w-auto object-contain transition-transform duration-300 group-hover:scale-105"
-                loading="eager"
+                className="h-16 lg:h-20 w-auto object-contain transition-transform duration-300 group-hover:scale-105"                loading="eager"
               />
             </Link>
 

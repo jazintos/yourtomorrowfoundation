@@ -38,7 +38,6 @@ const objectives = [
   'Advocate for inclusive policies that support marginalised groups',
 ]
 
-
 export default function About() {
   return (
     <>
@@ -51,7 +50,7 @@ export default function About() {
               <Star className="w-4 h-4" />
               About Your Tomorrow Foundation
             </div>
-            <h1 className="text-5xl lg:text-7xl font-outfit font-black text-ytm-dark dark:text-white leading-tight mb-6">
+            <h1 className="text-5xl lg:text-7xl font-outfit font-black text-ytm-blue dark:text-white leading-tight mb-6">
               Building Tomorrow, <span className="text-gradient">Today.</span>
             </h1>
             <p className="text-xl text-ytm-dark/70 dark:text-white/70 max-w-2xl leading-relaxed">
@@ -66,14 +65,14 @@ export default function About() {
         <div className="section-padding">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
-              <h2 className="text-4xl font-outfit font-bold text-ytm-dark dark:text-white mb-8">Our Purpose</h2>
+              <h2 className="text-4xl font-outfit font-bold text-ytm-blue dark:text-white mb-8">Our Purpose</h2>
               <div className="space-y-8">
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-xl bg-ytm-blue/10 flex items-center justify-center flex-shrink-0">
                     <Target className="w-6 h-6 text-ytm-blue" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-2">Aim & Objectives</h3>
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Aim & Objectives</h3>
                     <ul className="space-y-2">
                       {objectives.slice(0, 3).map((obj, i) => (
                         <li key={i} className="flex items-start gap-2 text-ytm-dark/70 dark:text-white/60">
@@ -89,7 +88,7 @@ export default function About() {
                     <BookOpen className="w-6 h-6 text-ytm-green" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-2">Mission</h3>
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Mission</h3>
                     <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
                       To unlock human potential through education and nourishment while building sustainable communities that inspire growth and opportunity.
                     </p>
@@ -100,7 +99,7 @@ export default function About() {
                     <Globe className="w-6 h-6 text-ytm-purple" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-2">Vision</h3>
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Vision</h3>
                     <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
                       To redefine Africa's future by creating inclusive systems of opportunity where communities are empowered and prosperity is sustained across generations.
                     </p>
@@ -111,7 +110,7 @@ export default function About() {
                     <Lightbulb className="w-6 h-6 text-ytm-teal" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-2">Our Approach</h3>
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Our Approach</h3>
                     <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
                       We combine direct intervention with capacity building, working hand-in-hand with communities to identify needs, co-design solutions, and implement sustainable programmes.
                     </p>
@@ -137,7 +136,7 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">Our Principles</h2>
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">Our Principles</h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">The core values that shape our culture, guide our decisions, and define our impact.</p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -146,7 +145,7 @@ export default function About() {
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-purple flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <principle.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-3">{principle.title}</h3>
+                <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-3">{principle.title}</h3>
                 <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">{principle.desc}</p>
               </motion.div>
             ))}
@@ -167,7 +166,7 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">Our People</h2>
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">Our People</h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">A dedicated team of changemakers committed to transforming lives across Nigeria.</p>
           </motion.div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">

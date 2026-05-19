@@ -9,7 +9,6 @@ import {
 import Link from 'next/link'
 import SEO from '@/components/SEO'
 
-
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -115,11 +114,13 @@ export default function GetInvolved() {
               <Star className="w-4 h-4" />
               Get Involved
             </div>
-            <h1 className="text-5xl lg:text-7xl font-outfit font-black text-ytm-dark dark:text-white leading-tight mb-6">
+
+            <h1 className="text-5xl lg:text-7xl font-outfit font-black text-ytm-blue dark:text-white leading-tight mb-6">
               Be the <span className="text-gradient">Change.</span>
             </h1>
+
             <p className="text-xl text-ytm-dark/70 dark:text-white/70 max-w-2xl leading-relaxed">
-              There are many ways to contribute to our mission. Whether you donate, 
+              There are many ways to contribute to our mission. Whether you donate,
               volunteer, partner, or advocate — your involvement creates real impact.
             </p>
           </motion.div>
@@ -130,7 +131,7 @@ export default function GetInvolved() {
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               How You Can Help
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -149,8 +150,11 @@ export default function GetInvolved() {
                 <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${option.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                   <option.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-2xl font-outfit font-bold text-ytm-dark dark:text-white mb-3">{option.title}</h3>
+
+                <h3 className="text-2xl font-outfit font-bold text-ytm-blue dark:text-white mb-3">{option.title}</h3>
+
                 <p className="text-ytm-dark/70 dark:text-white/60 mb-6 leading-relaxed">{option.desc}</p>
+
                 <ul className="space-y-2 mb-6">
                   {option.actions.map((action) => (
                     <li key={action} className="flex items-center gap-2 text-sm text-ytm-dark/60 dark:text-white/50">
@@ -159,6 +163,7 @@ export default function GetInvolved() {
                     </li>
                   ))}
                 </ul>
+
                 <Link
                   href={option.link}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-ytm-dark dark:bg-white text-white dark:text-ytm-dark font-medium hover:opacity-90 transition-all duration-300 hover:scale-105"
@@ -176,7 +181,7 @@ export default function GetInvolved() {
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Volunteer Opportunities
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -199,9 +204,11 @@ export default function GetInvolved() {
                   <div className="w-12 h-12 rounded-xl bg-ytm-blue/10 flex items-center justify-center flex-shrink-0">
                     <role.icon className="w-6 h-6 text-ytm-blue" />
                   </div>
+
                   <div className="flex-grow">
-                    <h3 className="text-lg font-outfit font-bold text-ytm-dark dark:text-white mb-1">{role.title}</h3>
+                    <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-1">{role.title}</h3>
                     <p className="text-ytm-dark/60 dark:text-white/50 text-sm mb-3">{role.desc}</p>
+
                     <div className="flex items-center gap-4 text-xs text-ytm-dark/50 dark:text-white/40">
                       <span className="flex items-center gap-1">
                         <Clock className="w-3 h-3" /> {role.commitment}
@@ -223,14 +230,16 @@ export default function GetInvolved() {
         <div className="section-padding">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
-              <h2 className="text-4xl font-outfit font-bold text-ytm-dark dark:text-white mb-6">
+              <h2 className="text-4xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
                 Partnership Opportunities
               </h2>
+
               <p className="text-ytm-dark/70 dark:text-white/60 mb-8 leading-relaxed">
-                We believe in the power of collaboration. By partnering with Your Tomorrow Foundation, 
-                organisations can fulfil their CSR objectives while making a tangible difference 
+                We believe in the power of collaboration. By partnering with Your Tomorrow Foundation,
+                organisations can fulfil their CSR objectives while making a tangible difference
                 in Nigerian communities.
               </p>
+
               <div className="space-y-4 mb-8">
                 {[
                   'Co-branded community programmes',
@@ -245,6 +254,7 @@ export default function GetInvolved() {
                   </div>
                 ))}
               </div>
+
               <Link href="/contact" className="pill-btn-primary">
                 Discuss Partnership
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -265,11 +275,13 @@ export default function GetInvolved() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-ytm-blue/50 to-transparent" />
               </div>
+
               <div className="absolute -bottom-6 -left-6 glass-card p-6 shadow-xl">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-ytm-green flex items-center justify-center">
                     <Handshake className="w-7 h-7 text-ytm-dark" />
                   </div>
+
                   <div>
                     <div className="text-sm text-ytm-dark/60 dark:text-white/60">Partnership enquiries</div>
                     <a href="mailto:partnerships@yourtomorrowfoundation.org" className="text-ytm-blue dark:text-ytm-green font-medium hover:underline">
@@ -290,15 +302,18 @@ export default function GetInvolved() {
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-white mb-6">
               Ready to Take Action?
             </h2>
+
             <p className="text-white/80 text-lg mb-10">
-              Whether you choose to donate, volunteer, partner, or advocate — 
+              Whether you choose to donate, volunteer, partner, or advocate —
               your contribution matters.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/donate" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-ytm-blue rounded-full font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105">
                 <Heart className="w-5 h-5" />
                 Donate Now
               </Link>
+
               <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-ytm-blue transition-all duration-300">
                 <Mail className="w-5 h-5" />
                 Contact Us

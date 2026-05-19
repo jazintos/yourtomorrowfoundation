@@ -9,7 +9,6 @@ import {
 import Link from 'next/link'
 import SEO from '@/components/SEO'
 
-
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -66,15 +65,18 @@ export default function Donate() {
                 <Heart className="w-4 h-4" />
                 Support Our Cause
               </div>
-              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-outfit font-black text-ytm-dark dark:text-white leading-tight mb-6">
+
+              <h1 className="text-5xl lg:text-6xl xl:text-7xl font-outfit font-black text-ytm-blue dark:text-white leading-tight mb-6">
                 Your Gift,<br />
                 Their <span className="text-gradient">Tomorrow.</span>
               </h1>
+
               <p className="text-lg text-ytm-dark/70 dark:text-white/70 leading-relaxed mb-8">
-                Every donation to Your Tomorrow Foundation directly transforms lives. 
-                From providing nutritious meals to empowering youth with skills, your 
+                Every donation to Your Tomorrow Foundation directly transforms lives.
+                From providing nutritious meals to empowering youth with skills, your
                 generosity creates ripples of positive change across Nigerian communities.
               </p>
+
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-green/10 text-ytm-green text-sm">
                   <Shield className="w-4 h-4" /> Secure Payment
@@ -118,7 +120,7 @@ export default function Donate() {
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Choose Your Impact
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -144,6 +146,7 @@ export default function Donate() {
                     <CheckCircle2 className="w-4 h-4 text-white" />
                   </div>
                 )}
+
                 <div className="text-3xl font-outfit font-black text-ytm-blue dark:text-ytm-green mb-2">
                   {option.amount === 'Custom' ? (
                     <input
@@ -158,8 +161,10 @@ export default function Donate() {
                     option.amount
                   )}
                 </div>
-                <div className="text-lg font-outfit font-semibold text-ytm-dark dark:text-white mb-1">{option.label}</div>
+
+                <div className="text-lg font-outfit font-semibold text-ytm-blue dark:text-white mb-1">{option.label}</div>
                 <p className="text-sm text-ytm-dark/60 dark:text-white/50 mb-3">{option.desc}</p>
+
                 <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-ytm-green/10 text-ytm-green text-xs font-medium">
                   <Users className="w-3 h-3" />
                   Impacts {option.impact}
@@ -185,7 +190,7 @@ export default function Donate() {
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Where Your Money Goes
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -204,7 +209,7 @@ export default function Donate() {
                 <div className="w-16 h-16 rounded-2xl bg-white dark:bg-white/5 shadow-lg flex items-center justify-center mx-auto mb-4">
                   <item.icon className={`w-8 h-8 ${item.color}`} />
                 </div>
-                <h3 className="text-lg font-outfit font-bold text-ytm-dark dark:text-white mb-2">{item.label}</h3>
+                <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-2">{item.label}</h3>
                 <p className="text-sm text-ytm-dark/60 dark:text-white/50">{item.desc}</p>
               </motion.div>
             ))}
@@ -215,9 +220,10 @@ export default function Donate() {
             {...fadeInUp}
             className="mt-16 max-w-3xl mx-auto"
           >
-            <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white text-center mb-6">
+            <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white text-center mb-6">
               Fund Allocation
             </h3>
+
             <div className="space-y-4">
               {[
                 { label: 'Direct Programme Delivery', percent: 85, color: 'bg-ytm-blue' },
@@ -229,6 +235,7 @@ export default function Donate() {
                     <span className="text-ytm-dark/70 dark:text-white/70">{item.label}</span>
                     <span className="font-medium text-ytm-dark dark:text-white">{item.percent}%</span>
                   </div>
+
                   <div className="h-3 bg-ytm-lavender dark:bg-white/10 rounded-full overflow-hidden">
                     <motion.div
                       initial={{ width: 0 }}
@@ -250,14 +257,15 @@ export default function Donate() {
         <div className="section-padding">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
-              <h2 className="text-4xl font-outfit font-bold text-ytm-dark dark:text-white mb-6">
+              <h2 className="text-4xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
                 Our Commitment to Transparency
               </h2>
               <p className="text-ytm-dark/70 dark:text-white/60 mb-8 leading-relaxed">
-                We believe donors deserve complete transparency. That's why we publish 
-                detailed reports, maintain audited financials, and keep you updated on 
+                We believe donors deserve complete transparency. That's why we publish
+                detailed reports, maintain audited financials, and keep you updated on
                 exactly how your donation is making an impact.
               </p>
+
               <div className="space-y-4">
                 {transparencyFeatures.map((feature, i) => (
                   <motion.div
@@ -287,13 +295,14 @@ export default function Donate() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ytm-blue/50 to-transparent" />
+
               <div className="absolute bottom-6 left-6 right-6 glass-card p-6">
                 <div className="flex items-center gap-4">
                   <div className="w-14 h-14 rounded-full bg-ytm-green flex items-center justify-center">
                     <Heart className="w-7 h-7 text-ytm-dark" />
                   </div>
                   <div>
-                    <div className="text-2xl font-outfit font-bold text-ytm-dark dark:text-white">85%</div>
+                    <div className="text-2xl font-outfit font-bold text-ytm-blue dark:text-white">85%</div>
                     <div className="text-sm text-ytm-dark/60 dark:text-white/60">of funds go directly to programmes</div>
                   </div>
                 </div>
@@ -307,7 +316,7 @@ export default function Donate() {
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Other Ways to Give
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -330,8 +339,10 @@ export default function Donate() {
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-purple flex items-center justify-center mx-auto mb-4">
                   <way.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-2">{way.title}</h3>
+
+                <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">{way.title}</h3>
                 <p className="text-ytm-dark/60 dark:text-white/50 text-sm mb-4">{way.desc}</p>
+
                 <Link href={way.link} className="text-ytm-blue dark:text-ytm-green font-medium text-sm hover:underline inline-flex items-center gap-1">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </Link>

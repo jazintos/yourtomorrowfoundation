@@ -7,7 +7,6 @@ import {
   ArrowRight, Target, Leaf, BookOpen, HandHeart, Globe, Sparkles
 } from 'lucide-react'
 
-
 const sdgs = [
   { num: '02', title: 'Zero Hunger', icon: Heart, color: 'from-amber-400 to-amber-600', desc: 'Ensuring nutritious meals reach vulnerable communities across Nigeria.' },
   { num: '04', title: 'Quality Education', icon: GraduationCap, color: 'from-red-400 to-red-600', desc: 'Providing access to learning resources, scholarships, and educational support.' },
@@ -88,7 +87,7 @@ export default function Home() {
                 Established 2024 — Nigeria
               </div>
 
-              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-outfit font-black text-ytm-dark dark:text-white leading-[0.95] mb-6">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-outfit font-black text-ytm-blue dark:text-white leading-[0.95] mb-6">
                 Learn.<br />
                 <span className="text-gradient">Work.</span><br />
                 Thrive.<br />
@@ -102,11 +101,18 @@ export default function Home() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/donate" className="pill-btn-primary text-lg">
+                <Link
+                  href="/donate"
+                  className="pill-btn-primary text-lg font-bold"
+                >
                   <Heart className="w-5 h-5 mr-2" />
                   Support Our Cause
                 </Link>
-                <Link href="/about" className="pill-btn-outline text-lg">
+
+                <Link
+                  href="/about"
+                  className="pill-btn-outline text-lg font-bold"
+                >
                   Learn More
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>
@@ -130,7 +136,7 @@ export default function Home() {
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-4xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-6">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
               Our Mission
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70 leading-relaxed">
@@ -145,7 +151,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-ytm-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Target className="w-7 h-7 text-ytm-blue" />
               </div>
-              <h3 className="text-2xl font-outfit font-bold text-ytm-dark dark:text-white mb-3">Mission</h3>
+              <h3 className="text-2xl font-outfit font-bold text-ytm-blue dark:text-white mb-3">Mission</h3>
               <p className="text-ytm-dark/70 dark:text-white/60 leading-relaxed">
                 To unlock human potential through education and nourishment while building
                 sustainable communities that inspire growth and opportunity.
@@ -156,7 +162,7 @@ export default function Home() {
               <div className="w-14 h-14 rounded-2xl bg-ytm-green/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Globe className="w-7 h-7 text-ytm-green" />
               </div>
-              <h3 className="text-2xl font-outfit font-bold text-ytm-dark dark:text-white mb-3">Vision</h3>
+              <h3 className="text-2xl font-outfit font-bold text-ytm-blue dark:text-white mb-3">Vision</h3>
               <p className="text-ytm-dark/70 dark:text-white/60 leading-relaxed">
                 To redefine Africa's future by creating inclusive systems of opportunity
                 where communities are empowered and prosperity is sustained across generations.
@@ -174,7 +180,7 @@ export default function Home() {
               <Globe className="w-4 h-4" />
               Aligned with Global Goals
             </div>
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Our Priorities
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -196,7 +202,7 @@ export default function Home() {
                   <sdg.icon className="w-8 h-8 text-white" />
                 </div>
                 <span className="text-4xl font-outfit font-black text-ytm-blue/20 dark:text-white/10">SDG {sdg.num}</span>
-                <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mt-2 mb-2">{sdg.title}</h3>
+                <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mt-2 mb-2">{sdg.title}</h3>
                 <p className="text-sm text-ytm-dark/60 dark:text-white/50 leading-relaxed">{sdg.desc}</p>
               </motion.div>
             ))}
@@ -208,7 +214,7 @@ export default function Home() {
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Three Core Pillars
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -243,7 +249,7 @@ export default function Home() {
                     <pillar.icon className="w-4 h-4" />
                     Pillar {i + 1}
                   </div>
-                  <h3 className="text-3xl lg:text-4xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+                  <h3 className="text-3xl lg:text-4xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
                     {pillar.title}
                   </h3>
                   <p className="text-ytm-dark/70 dark:text-white/60 text-lg leading-relaxed mb-6">
@@ -263,7 +269,7 @@ export default function Home() {
       <section className="py-20 lg:py-32 bg-gradient-to-br from-ytm-blue/5 to-ytm-green/5 dark:from-ytm-blue/10 dark:to-ytm-green/10">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Our Values
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -283,7 +289,7 @@ export default function Home() {
                 <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-purple flex items-center justify-center mx-auto mb-4">
                   <val.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-lg font-outfit font-bold text-ytm-dark dark:text-white mb-2">{val.title}</h3>
+                <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-2">{val.title}</h3>
                 <p className="text-sm text-ytm-dark/60 dark:text-white/50">{val.desc}</p>
               </motion.div>
             ))}
@@ -295,7 +301,7 @@ export default function Home() {
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Featured Programmes
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
@@ -357,7 +363,7 @@ export default function Home() {
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl lg:text-6xl font-outfit font-bold text-ytm-dark dark:text-white mb-6">
+            <h2 className="text-4xl lg:text-6xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
               Ready to Make a <span className="text-gradient">Difference?</span>
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70 mb-10 max-w-2xl mx-auto">

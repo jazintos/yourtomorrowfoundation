@@ -11,7 +11,6 @@ import Link from 'next/link'
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 import SEO from '@/components/SEO'
 
-
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
   whileInView: { opacity: 1, y: 0 },
@@ -91,11 +90,13 @@ export default function Contact() {
               <MessageSquare className="w-4 h-4" />
               Get in Touch
             </div>
-            <h1 className="text-5xl lg:text-7xl font-outfit font-black text-ytm-dark dark:text-white leading-tight mb-6">
+
+            <h1 className="text-5xl lg:text-7xl font-outfit font-black text-ytm-blue dark:text-white leading-tight mb-6">
               Let's <span className="text-gradient">Connect.</span>
             </h1>
+
             <p className="text-xl text-ytm-dark/70 dark:text-white/70 max-w-2xl leading-relaxed">
-              Whether you have questions, want to partner, or simply want to learn more 
+              Whether you have questions, want to partner, or simply want to learn more
               about our work — we'd love to hear from you.
             </p>
           </motion.div>
@@ -109,9 +110,10 @@ export default function Contact() {
             {/* Form */}
             <motion.div {...fadeInUp} className="lg:col-span-3">
               <div className="glass-card p-8">
-                <h2 className="text-2xl font-outfit font-bold text-ytm-dark dark:text-white mb-2">
+                <h2 className="text-2xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">
                   Send Us a Message
                 </h2>
+
                 <p className="text-ytm-dark/60 dark:text-white/50 mb-8">
                   Fill out the form below and we'll get back to you within 48 hours.
                 </p>
@@ -125,9 +127,11 @@ export default function Contact() {
                     <div className="w-16 h-16 rounded-full bg-ytm-green/20 flex items-center justify-center mx-auto mb-4">
                       <CheckCircle2 className="w-8 h-8 text-ytm-green" />
                     </div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-2">
+
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">
                       Message Sent!
                     </h3>
+
                     <p className="text-ytm-dark/60 dark:text-white/50">
                       Thank you for reaching out. We'll respond shortly.
                     </p>
@@ -152,6 +156,7 @@ export default function Contact() {
                           />
                         </div>
                       </div>
+
                       <div>
                         <label htmlFor="email" className="block text-sm font-medium text-ytm-dark dark:text-white mb-2">
                           Email Address
@@ -226,26 +231,31 @@ export default function Contact() {
                     <Star className="w-3 h-3" />
                     {office.type}
                   </div>
-                  <h3 className="text-xl font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+
+                  <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
                     {office.name}
                   </h3>
+
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <MapPin className="w-5 h-5 text-ytm-blue flex-shrink-0 mt-0.5" />
                       <span className="text-ytm-dark/70 dark:text-white/60 text-sm">{office.address}</span>
                     </div>
+
                     <div className="flex items-center gap-3">
                       <Phone className="w-5 h-5 text-ytm-blue flex-shrink-0" />
                       <a href={`tel:${office.phone}`} className="text-ytm-dark/70 dark:text-white/60 text-sm hover:text-ytm-blue transition-colors">
                         {office.phone}
                       </a>
                     </div>
+
                     <div className="flex items-center gap-3">
                       <Mail className="w-5 h-5 text-ytm-blue flex-shrink-0" />
                       <a href={`mailto:${office.email}`} className="text-ytm-dark/70 dark:text-white/60 text-sm hover:text-ytm-blue transition-colors">
                         {office.email}
                       </a>
                     </div>
+
                     <div className="flex items-center gap-3">
                       <Clock className="w-5 h-5 text-ytm-blue flex-shrink-0" />
                       <span className="text-ytm-dark/70 dark:text-white/60 text-sm">{office.hours}</span>
@@ -256,9 +266,10 @@ export default function Contact() {
 
               {/* Social Media */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-outfit font-bold text-ytm-dark dark:text-white mb-4">
+                <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-4">
                   Follow Us
                 </h3>
+
                 <div className="space-y-3">
                   {socialLinks.map((social) => (
                     <a
@@ -268,7 +279,7 @@ export default function Contact() {
                     >
                       <social.icon className="w-5 h-5 text-ytm-blue" />
                       <div>
-                        <div className="text-sm font-medium text-ytm-dark dark:text-white">{social.label}</div>
+                        <div className="text-sm font-medium text-ytm-blue dark:text-white">{social.label}</div>
                         <div className="text-xs text-ytm-dark/50 dark:text-white/40">{social.handle}</div>
                       </div>
                     </a>
@@ -290,11 +301,13 @@ export default function Contact() {
             <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center mx-auto mb-6">
               <Mail className="w-8 h-8 text-white" />
             </div>
+
             <h2 className="text-4xl font-outfit font-bold text-white mb-4">
               Stay in the Know
             </h2>
+
             <p className="text-white/80 mb-8">
-              Subscribe to our newsletter for the latest updates, impact stories, 
+              Subscribe to our newsletter for the latest updates, impact stories,
               and opportunities to get involved.
             </p>
 
@@ -305,7 +318,7 @@ export default function Contact() {
                 className="glass-card p-8 inline-block"
               >
                 <CheckCircle2 className="w-12 h-12 text-ytm-green mx-auto mb-3" />
-                <p className="text-ytm-dark dark:text-white font-medium">You're subscribed!</p>
+                <p className="text-ytm-blue dark:text-white font-medium">You're subscribed!</p>
                 <p className="text-ytm-dark/60 dark:text-white/50 text-sm">Welcome to the YTF community.</p>
               </motion.div>
             ) : (
@@ -318,6 +331,7 @@ export default function Contact() {
                   placeholder="Enter your email address"
                   className="flex-grow px-6 py-4 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 text-white placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                 />
+
                 <button
                   type="submit"
                   className="px-8 py-4 bg-white text-ytm-blue rounded-full font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 flex items-center justify-center gap-2"
@@ -340,18 +354,21 @@ export default function Contact() {
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-3xl font-outfit font-bold text-ytm-dark dark:text-white mb-6">
+            <h2 className="text-3xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
               Ready to Make an Impact?
             </h2>
+
             <p className="text-ytm-dark/70 dark:text-white/60 mb-8">
-              Your support, whether through donation, volunteering, or partnership, 
+              Your support, whether through donation, volunteering, or partnership,
               directly transforms lives across Nigeria.
             </p>
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/donate" className="pill-btn-primary">
                 <Heart className="w-5 h-5 mr-2" />
                 Donate Now
               </Link>
+
               <Link href="/get-involved" className="pill-btn-outline">
                 Get Involved
                 <ArrowRight className="w-5 h-5 ml-2" />
