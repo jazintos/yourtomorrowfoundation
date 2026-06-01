@@ -19,7 +19,7 @@ const pillars = [
     title: 'Nourish & Empower',
     desc: 'Providing essential nutrition and welfare support to vulnerable individuals and families, ensuring no one goes hungry.',
     icon: HandHeart,
-    color: 'bg-gradient-to-br from-ytm-blue to-ytm-purple',
+    color: 'bg-gradient-to-br from-ytm-blue to-ytm-green',
     image: '/images/medical_outreach.jpg',
   },
   {
@@ -33,8 +33,8 @@ const pillars = [
     title: 'Sustainable Communities & Inclusive Futures',
     desc: 'Partnering with communities to build resilient systems that foster long-term growth, dignity, and shared prosperity.',
     icon: Globe,
-    color: 'bg-gradient-to-br from-ytm-purple to-pink-500',
-    image: '/images/forest_walk.jpg',
+    color: 'bg-gradient-to-br from-ytm-blue to-ytm-green',
+    image: '/images/sustainable.jpg',
   },
 ]
 
@@ -147,7 +147,10 @@ export default function Home() {
           </motion.div>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <motion.div {...fadeInUp} className="glass-card p-8 hover:shadow-2xl transition-all duration-500 group">
+            <motion.div {...fadeInUp} className="glass-card relative overflow-hidden p-8 hover:shadow-2xl transition-all duration-500 group">
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+                  <Target className="absolute -right-8 -bottom-8 w-40 h-40 text-ytm-blue" />
+                </div>
               <div className="w-14 h-14 rounded-2xl bg-ytm-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Target className="w-7 h-7 text-ytm-blue" />
               </div>
@@ -158,7 +161,11 @@ export default function Home() {
               </p>
             </motion.div>
 
-            <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="glass-card p-8 hover:shadow-2xl transition-all duration-500 group">
+            <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="glass-card relative overflow-hidden p-8 hover:shadow-2xl transition-all duration-500 group">
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none">
+                <Globe className="absolute -right-8 -bottom-8 w-40 h-40 text-ytm-green" />
+              </div>
+              
               <div className="w-14 h-14 rounded-2xl bg-ytm-green/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <Globe className="w-7 h-7 text-ytm-green" />
               </div>
@@ -168,6 +175,38 @@ export default function Home() {
                 where communities are empowered and prosperity is sustained across generations.
               </p>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== VALUES SECTION ===== */}
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-ytm-blue/5 to-ytm-green/5 dark:from-ytm-blue/10 dark:to-ytm-green/10">
+        <div className="section-padding">
+          <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
+              Our Values
+            </h2>
+            <p className="text-lg text-ytm-dark/70 dark:text-white/70">
+              The principles that guide every decision we make and every action we take.
+            </p>
+          </motion.div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
+            {values.map((val, i) => (
+              <motion.div
+                key={val.title}
+                {...staggerItem}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                className="text-center glass-card p-6 hover:shadow-2xl transition-all duration-500"
+              >
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-green flex items-center justify-center mx-auto mb-4">
+                  <val.icon className="w-7 h-7 text-white" />
+                </div>
+                <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-2">{val.title}</h3>
+                <p className="text-sm text-ytm-dark/60 dark:text-white/50">{val.desc}</p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -265,37 +304,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ===== VALUES SECTION ===== */}
-      <section className="py-20 lg:py-32 bg-gradient-to-br from-ytm-blue/5 to-ytm-green/5 dark:from-ytm-blue/10 dark:to-ytm-green/10">
-        <div className="section-padding">
-          <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
-              Our Values
-            </h2>
-            <p className="text-lg text-ytm-dark/70 dark:text-white/70">
-              The principles that guide every decision we make and every action we take.
-            </p>
-          </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {values.map((val, i) => (
-              <motion.div
-                key={val.title}
-                {...staggerItem}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
-                whileHover={{ y: -8, scale: 1.02 }}
-                className="text-center glass-card p-6 hover:shadow-2xl transition-all duration-500"
-              >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-purple flex items-center justify-center mx-auto mb-4">
-                  <val.icon className="w-7 h-7 text-white" />
-                </div>
-                <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-2">{val.title}</h3>
-                <p className="text-sm text-ytm-dark/60 dark:text-white/50">{val.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* ===== FEATURED PROGRAMMES SECTION ===== */}
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
@@ -344,7 +353,7 @@ export default function Home() {
         <div className="section-padding">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { num: '2,500+', label: 'Lives Impacted', icon: Users },
+              { num: '35,000+', label: 'Lives Impacted', icon: Users },
               { num: '15+', label: 'Communities Served', icon: HomeIcon },
               { num: '8', label: 'Active Programmes', icon: Target },
               { num: '50+', label: 'Volunteers', icon: Heart },
