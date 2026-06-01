@@ -106,7 +106,7 @@ export default function Contact() {
       {/* ===== CONTACT FORM & INFO ===== */}
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
-          <div className="grid lg:grid-cols-5 gap-12">
+        <div className="grid lg:grid-cols-5 gap-16 xl:gap-20">
             {/* Form */}
             <motion.div {...fadeInUp} className="lg:col-span-3">
               <div className="glass-card p-8">
@@ -222,17 +222,31 @@ export default function Contact() {
             <motion.div
               {...fadeInUp}
               transition={{ delay: 0.2 }}
-              className="lg:col-span-2 space-y-6"
+              className="lg:col-span-2 space-y-8"
             >
+              <div>
+                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-blue/10 text-ytm-blue text-sm font-medium mb-4">
+                  <MapPin className="w-4 h-4" />
+                  Contact Information
+                </div>
+
+                <h2 className="text-3xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">
+                  Visit or Reach Us
+                </h2>
+
+                <p className="text-ytm-dark/60 dark:text-white/50">
+                  We are available to answer questions, discuss partnerships, and support your involvement with the Foundation.
+                </p>
+              </div>
               {/* Offices */}
               {offices.map((office) => (
-                <div key={office.name} className="glass-card p-6">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ytm-blue/10 text-ytm-blue text-xs font-medium mb-3">
+                <div key={office.name} className="glass-card p-8 hover:shadow-xl transition-all duration-300">
+                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ytm-blue text-white text-xs font-medium mb-4">
                     <Star className="w-3 h-3" />
                     {office.type}
                   </div>
 
-                  <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
+                  <h3 className="text-2xl font-outfit font-bold text-ytm-blue dark:text-white mb-5">
                     {office.name}
                   </h3>
 
@@ -266,9 +280,12 @@ export default function Contact() {
 
               {/* Social Media */}
               <div className="glass-card p-6">
-                <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-4">
+              <div className="flex items-center gap-3 mb-4">
+                <Globe className="w-5 h-5 text-ytm-blue" />
+                <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white">
                   Follow Us
                 </h3>
+              </div>
 
                 <div className="space-y-3">
                   {socialLinks.map((social) => (
@@ -292,7 +309,7 @@ export default function Contact() {
       </section>
 
       {/* ===== NEWSLETTER ===== */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-purple">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-green">
         <div className="section-padding">
           <motion.div
             {...fadeInUp}

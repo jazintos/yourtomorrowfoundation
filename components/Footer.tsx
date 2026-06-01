@@ -46,7 +46,7 @@ window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 
 return ( <footer className="bg-ytm-dark dark:bg-black text-white">
-{/* CTA Banner */} <div className="bg-gradient-to-r from-ytm-blue via-ytm-purple to-ytm-teal py-16"> <div className="section-padding text-center">
+{/* CTA Banner */} <div className="bg-gradient-to-r from-ytm-blue via-ytm-green to-ytm-teal py-16"> <div className="section-padding text-center">
 <motion.div
 initial={{ opacity: 0, y: 30 }}
 whileInView={{ opacity: 1, y: 0 }}
