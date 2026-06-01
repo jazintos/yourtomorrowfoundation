@@ -86,12 +86,22 @@ Get Involved </Link> </div>
           sustainable communities across Nigeria.
         </p>
 
+        <div className="space-y-2 mb-6">
+          <div className="text-xs uppercase tracking-wider text-ytm-green font-semibold">
+            Registered Non-Profit Organisation
+          </div>
+
+          <div className="text-sm text-white/60">
+            Established 2024 • Nigeria
+          </div>
+        </div>
+
         <div className="flex gap-3">
           {socialLinks.map((social) => (
             <a
               key={social.label}
               href={social.href}
-              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-ytm-green hover:text-ytm-dark transition-all duration-300"
+              className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-ytm-green hover:text-ytm-dark hover:scale-110 transition-all duration-300"
             >
               <social.icon className="w-5 h-5" />
             </a>
@@ -129,7 +139,7 @@ Get Involved </Link> </div>
 
       {/* Contact */}
       <div>
-        <h3 className="text-lg font-semibold mb-6 text-ytm-green">Contact Us</h3>
+        <h3 className="text-lg font-semibold mb-6 text-ytm-green">Contact Information</h3>
 
         <div className="space-y-4 text-sm text-white/70">
           <div className="flex gap-3">
@@ -144,7 +154,7 @@ Get Involved </Link> </div>
 
           <div className="flex gap-3">
             <Phone className="w-5 h-5 text-ytm-green" />
-            <span>+234 XXX XXX XXXX</span>
+            <span>+234 905 910 5800</span>
           </div>
         </div>
       </div>
@@ -154,7 +164,7 @@ Get Involved </Link> </div>
   {/* Bottom */}
   <div className="border-t border-white/10 py-6">
     <div className="section-padding flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/50">
-      <p>© {new Date().getFullYear()} Your Tomorrow Foundation</p>
+      <p>© {new Date().getFullYear()} Your Tomorrow Foundation. All Rights Reserved.</p>
 
       <button
         onClick={scrollToTop}
