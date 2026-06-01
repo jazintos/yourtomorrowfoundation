@@ -4,6 +4,7 @@ import './globals.css'
 import { ThemeProvider } from '@/context/ThemeContext'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
+import CustomCursor from '@/components/CustomCursor'
 
 const outfit = Outfit({
   subsets: ['latin'],
@@ -43,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${outfit.variable} ${inter.variable} font-inter antialiased`}>
+      <CustomCursor />
         <ThemeProvider>
           <div className="min-h-screen flex flex-col bg-background">
             <Navbar />

@@ -206,3 +206,9 @@
 .animate-pulse-soft {
   animation: pulse-soft 2s ease-in-out infinite;
 }
+
+@media (min-width: 1024px) {
+  * {
+    cursor: none !important;
+  }
+}
