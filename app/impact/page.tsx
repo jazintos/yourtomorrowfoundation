@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import {
   Heart, GraduationCap, HomeIcon, Utensils, BookOpen,
-  Wrench, Handshake, Target, ArrowRight, Star, Users, Zap, BarChart3
+  Wrench, Handshake, Target, ArrowRight, Star, Users, BarChart3
 } from 'lucide-react'
 import Link from 'next/link'
 import SEO from '@/components/SEO'
@@ -22,7 +22,7 @@ const coreAreas = [
     desc: 'Providing nutritious meals, food supplies, and essential welfare items to vulnerable populations including prison inmates, school children, and low-income families.',
     icon: Utensils,
     color: 'from-amber-400 to-orange-500',
-    stats: '5,000+ meals served',
+    stats: '30,000+ meals served',
     image: '/images/1e0aebc4-f999-467b-af96-66bc180a6d83.jpg',
   },
   {
@@ -30,7 +30,7 @@ const coreAreas = [
     desc: 'Delivering scholarships, learning materials, school supplies, and mentorship programmes to underserved students across Nigeria.',
     icon: BookOpen,
     color: 'from-ytm-blue to-blue-600',
-    stats: '500+ students supported',
+    stats: '2,500+ students supported',
     image: '/images/school_kids.jpg',
   },
   {
@@ -38,14 +38,14 @@ const coreAreas = [
     desc: 'Equipping youth and adults with vocational skills, entrepreneurial training, and micro-enterprise support for financial independence.',
     icon: Wrench,
     color: 'from-ytm-green to-teal-500',
-    stats: '200+ youth trained',
+    stats: 'Programme Launching Soon',
     image: '/images/forest_walk.jpg',
   },
   {
     title: 'Sustainable Communities',
     desc: 'Partnering with local communities to build resilient infrastructure, promote environmental sustainability, and foster inclusive development.',
     icon: HomeIcon,
-    color: 'from-ytm-purple to-pink-500',
+    color: 'from-ytm-blue to-ytm-green',
     stats: '15+ communities engaged',
     image: '/images/medical_outreach.jpg',
   },
@@ -113,11 +113,10 @@ function AnimatedCounter({ end, duration = 2000, suffix = '' }: { end: number; d
 }
 
 const impactMetrics = [
-  { num: 2500, suffix: '+', label: 'People Reached', icon: Users },
-  { num: 5000, suffix: '+', label: 'Meals Served', icon: Utensils },
-  { num: 500, suffix: '+', label: 'Students Supported', icon: BookOpen },
-  { num: 200, suffix: '+', label: 'Youth Trained', icon: Zap },
-  { num: 15, suffix: '+', label: 'Communities', icon: HomeIcon },
+  { num: 35000, suffix: '+', label: 'Lives Impacted', icon: Users },
+  { num: 30000, suffix: '+', label: 'Meals Served', icon: Utensils },
+  { num: 2500, suffix: '+', label: 'Students Supported', icon: BookOpen },
+  { num: 15, suffix: '+', label: 'Communities Served', icon: HomeIcon },
   { num: 50, suffix: '+', label: 'Volunteers', icon: Heart },
 ]
 
@@ -256,7 +255,7 @@ export default function Impact() {
       </section>
 
       {/* ===== IMPACT METRICS ===== */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-purple">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-green">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-white mb-4">
@@ -335,8 +334,8 @@ export default function Impact() {
                     <Target className="w-6 h-6 text-ytm-dark" />
                   </div>
                   <div>
-                    <div className="text-sm font-medium text-ytm-dark dark:text-white">Goal for 2027</div>
-                    <div className="text-2xl font-outfit font-bold text-ytm-blue dark:text-ytm-green">10,000+</div>
+                  <div className="text-sm font-medium text-ytm-dark dark:text-white">People Supported by 2027</div>
+                    <div className="text-2xl font-outfit font-bold text-ytm-blue dark:text-ytm-green">100,000+</div>
                   </div>
                 </div>
               </div>
