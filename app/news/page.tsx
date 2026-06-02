@@ -15,6 +15,7 @@ const fadeInUp = {
 }
 
 type NewsItem = {
+  id?: string
   title: string
   slug: string
   excerpt: string
@@ -23,6 +24,8 @@ type NewsItem = {
   author: string
   category: string
   image: string
+  featured?: boolean
+  published?: boolean
 }
 
 const staticNews: NewsItem[] = [
@@ -87,6 +90,7 @@ export default function NewsPage() {
       const { data, error } = await supabase
         .from('news')
         .select('*')
+        .eq('published', true)
         .order('created_at', { ascending: false })
 
       if (!error && data) {
@@ -97,8 +101,10 @@ export default function NewsPage() {
     fetchNews()
   }, [])
 
-  const allNews = [
-    ...dbNews,
+  const allNews: NewsItem[] = [
+    ...dbNews.filter(
+      (item) => item.published !== false
+    ),
     ...staticNews,
   ]
 
@@ -131,18 +137,24 @@ export default function NewsPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {allNews.map((item, i) => (
               <motion.article
-                key={i}
+                key={item.id || item.slug}
                 {...fadeInUp}
                 transition={{ delay: i * 0.08 }}
                 className="glass-card overflow-hidden hover:shadow-2xl transition-all duration-300"
               >
-                <div className="relative h-64 overflow-hidden">
+              <div className="relative h-64 overflow-hidden">
+                {item.image ? (
                   <img
                     src={item.image}
                     alt={item.title}
                     className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   />
-                </div>
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-slate-100 text-gray-500 font-medium">
+                    No Image Available
+                  </div>
+                )}
+              </div>
 
                 <div className="p-6">
                   <div className="flex items-center gap-4 text-sm text-gray-500 mb-4">

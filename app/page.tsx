@@ -4,8 +4,10 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   Heart, GraduationCap, TrendingUp, HomeIcon, Users, Star,
-  ArrowRight, Target, Leaf, BookOpen, HandHeart, Globe, Sparkles
+  ArrowRight, Target, Leaf, BookOpen, HandHeart, Globe, Sparkles, Newspaper
 } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { supabase } from '@/lib/supabase'
 
 const sdgs = [
   { num: '02', title: 'Zero Hunger', icon: Heart, color: 'from-amber-400 to-amber-600', desc: 'Ensuring nutritious meals reach vulnerable communities across Nigeria.' },
@@ -60,6 +62,28 @@ const staggerItem = {
 }
 
 export default function Home() {
+const [featuredNews, setFeaturedNews] = useState<any[]>([])
+
+useEffect(() => {
+  const fetchFeaturedNews = async () => {
+    const { data } = await supabase
+      .from('news')
+      .select('*')
+      .eq('featured', true)
+      .eq('published', true)
+      .order('created_at', {
+        ascending: false,
+      })
+      .limit(3)
+
+    if (data) {
+      setFeaturedNews(data)
+    }
+  }
+
+  fetchFeaturedNews()
+}, [])
+
   return (
     <>
       {/* ===== HERO SECTION ===== */}
@@ -348,8 +372,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ===== DYNAMIC NEWS SECTION - NEW===== */}
+
+      <section className="py-20 lg:py-32 bg-slate-50 dark:bg-ytm-dark">
+
+      <div className="section-padding">
+
+        <div className="text-center max-w-3xl mx-auto mb-16">
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-blue/10 text-ytm-blue text-sm font-medium mb-6">
+            <Newspaper className="w-4 h-4" />
+            Latest Stories
+          </div>
+
+          <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
+            Featured News & Updates
+          </h2>
+
+          <p className="text-lg text-ytm-dark/70 dark:text-white/70">
+            Follow our latest outreach programmes, community impact stories and foundation updates.
+          </p>
+
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+
+          {featuredNews.map((article) => (
+
+            <Link
+              key={article.id}
+              href={`/news/${article.slug}`}
+              className="glass-card overflow-hidden hover:shadow-2xl transition-all duration-300"
+            >
+
+              {article.image && (
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-56 object-cover"
+                />
+              )}
+
+              <div className="p-6">
+
+                <div className="text-xs text-ytm-blue font-semibold mb-3">
+                  {article.category}
+                </div>
+
+                <h3 className="text-xl font-bold text-ytm-blue mb-3">
+                  {article.title}
+                </h3>
+
+                <p className="text-sm text-gray-600 line-clamp-3">
+                  {article.excerpt}
+                </p>
+
+              </div>
+
+            </Link>
+
+          ))}
+
+        </div>
+
+        <div className="text-center mt-12">
+
+          <Link
+            href="/news"
+            className="pill-btn-outline"
+          >
+            View All Stories
+            <ArrowRight className="w-5 h-5 ml-2" />
+          </Link>
+
+        </div>
+
+      </div>
+
+      </section>
+
       {/* ===== IMPACT STATS SECTION ===== */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-purple">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-green">
         <div className="section-padding">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
