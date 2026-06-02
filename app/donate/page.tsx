@@ -8,7 +8,17 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import SEO from '@/components/SEO'
-import { PaystackButton } from 'react-paystack'
+import dynamic from 'next/dynamic'
+
+const PaystackButton = dynamic(
+  () =>
+    import('react-paystack').then(
+      (mod) => mod.PaystackButton
+    ),
+  {
+    ssr: false,
+  }
+)
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
