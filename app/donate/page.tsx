@@ -8,6 +8,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import SEO from '@/components/SEO'
+import { PaystackButton } from 'react-paystack'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 30 },
@@ -43,6 +44,55 @@ const transparencyFeatures = [
 export default function Donate() {
   const [selectedAmount, setSelectedAmount] = useState<number | null>(1)
   const [customAmount, setCustomAmount] = useState('')
+  const [email, setEmail] = useState('')
+
+  const amountValues = [
+    5000,
+    15000,
+    50000,
+    100000,
+    250000,
+  ]
+  
+  const selectedValue =
+    selectedAmount !== null &&
+    selectedAmount < amountValues.length
+      ? amountValues[selectedAmount]
+      : Number(customAmount.replace(/,/g, '')) || 0
+  
+  const componentProps = {
+        email,
+        amount: selectedValue * 100,
+        publicKey:
+          process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || '',
+        text: 'Proceed to Secure Payment',
+      
+        onSuccess: () => {
+          alert('Payment successful!')
+        },
+      
+        onClose: () => {
+          console.log('Payment cancelled')
+        },
+      } 
+      
+  const paystackConfig = {    
+    reference: `${new Date().getTime()}`,
+    email: email,
+    amount: selectedValue * 100,
+    publicKey:
+      process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || '',
+  }
+  
+  const onSuccess = () => {
+    alert(
+      'Thank you for your donation! Payment successful.'
+    )
+  }
+  
+  const onClose = () => {
+    console.log('Payment window closed')
+  }
 
   return (
     <>
@@ -174,10 +224,21 @@ export default function Donate() {
           </div>
 
           <motion.div {...fadeInUp} className="text-center mt-12">
-            <button className="pill-btn-primary text-lg">
-              <Lock className="w-5 h-5 mr-2" />
-              Proceed to Secure Payment
-            </button>
+
+          <div className="max-w-md mx-auto mb-6">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-4 py-3 rounded-xl border border-ytm-lavender focus:outline-none focus:ring-2 focus:ring-ytm-blue"
+              required
+            />
+          </div>
+          <PaystackButton
+              {...componentProps}
+              className="pill-btn-primary text-lg"
+            />
             <p className="text-sm text-ytm-dark/50 dark:text-white/40 mt-4 flex items-center justify-center gap-2">
               <Shield className="w-4 h-4" />
               Your payment information is encrypted and secure
