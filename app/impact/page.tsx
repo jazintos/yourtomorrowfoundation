@@ -189,10 +189,10 @@ export default function Impact() {
       {/* ===== CORE AREAS ===== */}
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
-          <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
-              Our Four Key Areas of Impact
-            </h2>
+          <motion.div {...fadeInUp} className="text-center max-w-5xl mx-auto mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4 whitespace-nowrap">
+            Our Four Key Areas of Impact
+          </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
               Four strategic focus areas through which we deliver measurable and sustainable impact across communities.
             </p>
@@ -233,7 +233,7 @@ export default function Impact() {
       {/* ===== PROGRAMMES ===== */}
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
-          <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
+          <motion.div {...fadeInUp} className="text-center max-w-5xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Our Programmes
             </h2>

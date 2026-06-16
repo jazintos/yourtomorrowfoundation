@@ -210,14 +210,14 @@ export default function About() {
       {/* ===== CTA ===== */}
       <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-lavender via-ytm-white to-ytm-blue/10">
         <div className="section-padding">
-          <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
+          <motion.div {...fadeInUp} className="text-center max-w-5xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-blue mb-6">Join Our Mission</h2>
             <p className="text-dark/70 text-lg mb-8">Whether as a donor, volunteer, or partner, there's a place for you in building a brighter tomorrow.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/get-involved" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-ytm-blue rounded-full font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105">
                 Get Involved <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-ytm-blue transition-all duration-300">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-ytm-blue rounded-full font-bold hover:bg-white hover:text-ytm-blue transition-all duration-300">
                 Contact Us
               </Link>
             </div>

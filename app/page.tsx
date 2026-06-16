@@ -501,18 +501,18 @@ useEffect(() => {
               Ready to Make a <span className="text-gradient">Difference?</span>
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70 mb-10 max-w-2xl mx-auto">
-              Whether you donate, volunteer, or partner with us, your contribution creates
-              ripples of positive change across Nigerian communities.
+              Your contribution creates ripples of positive change across Nigerian communities. 
+              Want to know more about how to donate, volunteer, or partner with us? 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/donate" className="pill-btn-primary text-lg">
-                <Heart className="w-5 h-5 mr-2" />
-                Donate Now
+                <HandHeart className="w-5 h-5 mr-2" />
+                Contact Us
               </Link>
-              <Link href="/get-involved" className="pill-btn-green text-lg">
+            {/*   <Link href="/get-involved" className="pill-btn-green text-lg">
                 Get Involved
                 <ArrowRight className="w-5 h-5 ml-2" />
-              </Link>
+              </Link> */}
             </div>
           </motion.div>
         </div>
