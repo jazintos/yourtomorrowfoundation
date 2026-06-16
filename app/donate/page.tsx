@@ -10,6 +10,8 @@ import Link from 'next/link'
 import SEO from '@/components/SEO'
 import dynamic from 'next/dynamic'
 
+import { useRouter } from 'next/navigation'
+
 const PaystackButton = dynamic(
   () =>
     import('react-paystack').then(
@@ -40,7 +42,7 @@ const impactBreakdown = [
   { icon: Utensils, label: 'Feeding', desc: '₦5,000 feeds a family for a week', color: 'text-amber-500' },
   { icon: BookOpen, label: 'Education', desc: '₦15,000 supports one student', color: 'text-ytm-blue' },
   { icon: Wrench, label: 'Skills', desc: '₦50,000 trains one youth', color: 'text-ytm-green' },
-  { icon: HomeIcon, label: 'Community', desc: '₦100,000 funds outreach', color: 'text-ytm-purple' },
+  { icon: HomeIcon, label: 'Community', desc: '₦100,000 funds outreach', color: 'text-ytm-green' },
 ]
 
 const transparencyFeatures = [
@@ -70,19 +72,24 @@ export default function Donate() {
       ? amountValues[selectedAmount]
       : Number(customAmount.replace(/,/g, '')) || 0
   
-  const componentProps = {
+      const componentProps = {
         email,
+      
         amount: selectedValue * 100,
+      
         publicKey:
           process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || '',
+      
         text: 'Proceed to Secure Payment',
       
         onSuccess: () => {
-          alert('Payment successful!')
+          alert(
+            'Thank you for supporting Your Tomorrow Foundation. Your donation has been received successfully and a confirmation email will be sent shortly.'
+          )
         },
       
         onClose: () => {
-          console.log('Payment cancelled')
+          console.log('Donation cancelled')
         },
       } 
       
@@ -94,10 +101,10 @@ export default function Donate() {
       process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY || '',
   }
   
-  const onSuccess = () => {
-    alert(
-      'Thank you for your donation! Payment successful.'
-    )
+  const router = useRouter()
+
+  onSuccess: () => {
+    router.push('/donate/success')
   }
   
   const onClose = () => {
@@ -144,8 +151,8 @@ export default function Donate() {
                 <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-blue/10 text-ytm-blue text-sm">
                   <CheckCircle2 className="w-4 h-4" /> Tax Deductible
                 </div>
-                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-purple/10 text-ytm-purple text-sm">
-                  <Star className="w-4 h-4" /> 100% to Programmes
+                <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-green/10 text-ytm-green text-sm">
+                  <Star className="w-4 h-4" />  Maximum Community Impact
                 </div>
               </div>
             </motion.div>
@@ -245,14 +252,81 @@ export default function Donate() {
               required
             />
           </div>
-          <PaystackButton
+          {email && selectedValue > 0 ? (
+        <PaystackButton
               {...componentProps}
               className="pill-btn-primary text-lg"
             />
+          ) : (
+            <button
+              disabled
+              className="pill-btn-primary text-lg opacity-50 cursor-not-allowed"
+            >
+              Enter Email & Select Amount
+            </button>
+          )}
             <p className="text-sm text-ytm-dark/50 dark:text-white/40 mt-4 flex items-center justify-center gap-2">
               <Shield className="w-4 h-4" />
               Your payment information is encrypted and secure
             </p>
+
+            <div className="mt-10 max-w-2xl mx-auto glass-card p-6 text-left">
+              <h3 className="text-xl font-bold text-ytm-blue mb-4">
+                Registration & Compliance
+              </h3>
+
+              <div className="space-y-2 text-gray-600">
+                <p>
+                  <strong>Your Tomorrow Foundation</strong> is a registered
+                  non-profit organisation operating in Nigeria.
+                </p>
+
+                <p>
+                  We are committed to transparency, accountability and
+                  responsible stewardship of all donations received.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-6 max-w-2xl mx-auto glass-card p-6 text-left">
+              <h3 className="text-xl font-bold text-ytm-blue mb-4">
+                Secure Payment Processing
+              </h3>
+
+              <p className="text-gray-600">
+                All online donations are processed securely through
+                Paystack. Your card and payment information are
+                encrypted and protected using industry-standard
+                security protocols.
+              </p>
+            </div>
+
+            <div className="mt-6 max-w-2xl mx-auto glass-card p-6 text-left">
+            <h3 className="text-xl font-bold text-ytm-blue mb-4">
+                Donor Privacy
+              </h3>
+
+              <p className="text-gray-600">
+                Your personal information is never sold, rented,
+                or shared with third parties. Information provided
+                during donations is used solely for donation
+                processing, receipts, donor communication and
+                programme updates.
+              </p>
+            </div>            
+
+            <div className="mt-6 max-w-2xl mx-auto glass-card p-6 text-left">
+              <h3 className="text-xl font-bold text-ytm-blue mb-4">
+                Donation Support
+              </h3>
+
+              <p className="text-gray-600">
+                If you believe a donation was made in error,
+                please contact us within 14 days and our team
+                will investigate and assist appropriately.
+              </p>
+            </div>    
+
           </motion.div>
         </div>
       </section>
@@ -407,7 +481,7 @@ export default function Donate() {
                 transition={{ delay: i * 0.1 }}
                 className="glass-card p-8 text-center hover:shadow-xl transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-purple flex items-center justify-center mx-auto mb-4">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-green to-emerald-600 flex items-center justify-center mx-auto mb-4">
                   <way.icon className="w-7 h-7 text-white" />
                 </div>
 

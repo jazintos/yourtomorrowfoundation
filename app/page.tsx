@@ -18,25 +18,35 @@ const sdgs = [
 
 const pillars = [
   {
-    title: 'Nourish & Empower',
-    desc: 'Providing essential nutrition and welfare support to vulnerable individuals and families, ensuring no one goes hungry.',
-    icon: HandHeart,
-    color: 'bg-gradient-to-br from-ytm-blue to-ytm-green',
-    image: '/images/medical_outreach.jpg',
-  },
-  {
-    title: 'Skills, Enterprise & Economic Mobility',
-    desc: 'Equipping youth and adults with vocational training, entrepreneurial skills, and pathways to financial independence.',
+    title: 'Learn',
+    desc: 'Expanding access to quality education, mentorship, scholarships, and learning opportunities that empower individuals to reach their full potential.',
     icon: BookOpen,
-    color: 'bg-gradient-to-br from-ytm-green to-teal-500',
+    color: 'bg-gradient-to-br from-ytm-blue to-blue-700',
     image: '/images/school_kids.jpg',
   },
+
   {
-    title: 'Sustainable Communities & Inclusive Futures',
-    desc: 'Partnering with communities to build resilient systems that foster long-term growth, dignity, and shared prosperity.',
+    title: 'Work',
+    desc: 'Equipping youth and adults with vocational skills, entrepreneurship support, and economic opportunities that foster independence and growth.',
+    icon: TrendingUp,
+    color: 'bg-gradient-to-br from-ytm-green to-teal-500',
+    image: '/images/medical_outreach.jpg',
+  },
+
+  {
+    title: 'Thrive',
+    desc: 'Providing nutrition, healthcare support, welfare programmes, and humanitarian interventions that improve quality of life.',
+    icon: Heart,
+    color: 'bg-gradient-to-br from-ytm-purple to-purple-600',
+    image: '/images/sustainable.jpg',
+  },
+
+  {
+    title: 'Belong',
+    desc: 'Building sustainable communities where inclusion, dignity, resilience, and shared prosperity enable everyone to participate and succeed.',
     icon: Globe,
     color: 'bg-gradient-to-br from-ytm-blue to-ytm-green',
-    image: '/images/sustainable.jpg',
+    image: '/images/IMG-20260226-WA0000.jpg',
   },
 ]
 
@@ -278,7 +288,7 @@ useEffect(() => {
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
-              Three Core Pillars
+              Four Core Pillars
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
               Our work is built on three foundational pillars that guide every programme
@@ -344,7 +354,7 @@ useEffect(() => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
-              { title: 'Prison Outreach', desc: 'Supporting inmates at Kirikiri Female Prison with essential supplies, sanitary products, and hope.', image: '/images/IMG-20260226-WA0000.jpg', link: '/impact' },
+              { title: 'Prison Outreach', desc: 'Supporting inmates in correctional facilities through welfare support, counselling initiatives, rehabilitation efforts, and pathways to reintegration.', image: '/images/IMG-20260226-WA0000.jpg', link: '/impact' },
               { title: 'Medical Outreach', desc: 'Providing free healthcare services to underserved communities across Nigeria.', image: '/images/medical_outreach.jpg', link: '/impact' },
               { title: 'School Outreach', desc: 'Delivering educational materials, scholarships, and mentorship to students.', image: '/images/school_kids.jpg', link: '/impact' },
             ].map((prog, i) => (
@@ -454,6 +464,18 @@ useEffect(() => {
       {/* ===== IMPACT STATS SECTION ===== */}
       <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-green">
         <div className="section-padding">
+        <motion.div
+          {...fadeInUp}
+          className="text-center mb-16"
+        >
+          <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-white mb-4">
+            Impact At A Glance
+          </h2>
+
+          <p className="text-white/80 text-lg">
+            As at June 2026
+          </p>
+        </motion.div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {[
               { num: '35,000+', label: 'Lives Impacted', icon: Users },

@@ -69,7 +69,7 @@ Get Involved </Link> </div>
 ```
   {/* Main Footer */}
   <div className="section-padding py-16">
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
       
       {/* Brand */}
       <div>
@@ -134,6 +134,59 @@ Get Involved </Link> </div>
               </Link>
             </li>
           ))}
+        </ul>
+      </div>
+      {/* Governance */}
+      <div>
+        <h3 className="text-lg font-semibold mb-6 text-ytm-green">
+          Governance & Policies
+        </h3>
+
+        <ul className="space-y-3">
+          <li>
+            <Link
+              href="/privacy-policy"
+              className="text-white/70 hover:text-ytm-green text-sm"
+            >
+              Privacy Policy
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/terms-of-use"
+              className="text-white/70 hover:text-ytm-green text-sm"
+            >
+              Terms of Use
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/donations-policy"
+              className="text-white/70 hover:text-ytm-green text-sm"
+            >
+              Donations Policy
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/safeguarding"
+              className="text-white/70 hover:text-ytm-green text-sm"
+            >
+              Safeguarding Policy
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/complaints"
+              className="text-white/70 hover:text-ytm-green text-sm"
+            >
+              Complaints Procedure
+            </Link>
+          </li>
         </ul>
       </div>
 

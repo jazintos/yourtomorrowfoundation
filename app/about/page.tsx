@@ -22,11 +22,31 @@ const teamMembers = [
 ]
 
 const principles = [
-  { title: 'Community-First', desc: "Every decision is made with the community's best interest at heart. We listen, learn, and lead from within.", icon: Users },
-  { title: 'Equity', desc: 'We ensure fair access to resources and opportunities, regardless of background, gender, or circumstance.', icon: Heart },
-  { title: 'Accountability', desc: 'Transparent operations, measurable outcomes, and responsible stewardship of every resource entrusted to us.', icon: Shield },
-  { title: 'Sustainability', desc: 'We design programmes that create lasting change, building systems that outlive individual interventions.', icon: Leaf },
-  { title: 'Collaboration', desc: 'We partner with government, other NGOs, and the private sector to amplify our collective impact.', icon: Handshake },
+  {
+    title: 'Dignity',
+    desc: 'We uphold the worth, rights and potential of every individual we serve.',
+    icon: Heart,
+  },
+  {
+    title: 'Integrity',
+    desc: 'We operate with honesty, transparency and accountability in all we do.',
+    icon: Shield,
+  },
+  {
+    title: 'Compassion',
+    desc: 'We lead with empathy and place people at the centre of every intervention.',
+    icon: Users,
+  },
+  {
+    title: 'Impact',
+    desc: 'We focus on measurable outcomes that create lasting positive change.',
+    icon: Target,
+  },
+  {
+    title: 'Excellence',
+    desc: 'We pursue the highest standards in service delivery, partnerships and stewardship.',
+    icon: Star,
+  },
 ]
 
 const objectives = [
@@ -95,8 +115,8 @@ export default function About() {
                   </div>
                 </div>
                 <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-ytm-purple/10 flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-ytm-purple" />
+                  <div className="w-12 h-12 rounded-xl bg-ytm-green/10 flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-6 h-6 text-ytm-green" />
                   </div>
                   <div>
                     <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Vision</h3>
@@ -136,13 +156,13 @@ export default function About() {
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">Our Principles</h2>
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">Core Values</h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">The core values that shape our culture, guide our decisions, and define our impact.</p>
           </motion.div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {principles.map((principle, i) => (
               <motion.div key={principle.title} {...fadeInUp} transition={{ delay: i * 0.1 }} whileHover={{ y: -8 }} className="glass-card p-8 hover:shadow-2xl transition-all duration-500 group">
-                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-purple flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+                <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-ytm-blue to-ytm-green flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <principle.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-3">{principle.title}</h3>
@@ -188,16 +208,16 @@ export default function About() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-purple">
+      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-lavender via-ytm-white to-ytm-blue/10">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-white mb-6">Join Our Mission</h2>
-            <p className="text-white/80 text-lg mb-8">Whether as a donor, volunteer, or partner, there's a place for you in building a brighter tomorrow.</p>
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-blue mb-6">Join Our Mission</h2>
+            <p className="text-dark/70 text-lg mb-8">Whether as a donor, volunteer, or partner, there's a place for you in building a brighter tomorrow.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/get-involved" className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-ytm-blue rounded-full font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105">
                 Get Involved <ArrowRight className="w-5 h-5" />
               </Link>
-              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-ytm-blue transition-all duration-300">
+              <Link href="/contact" className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-full font-bold hover:bg-white hover:text-ytm-blue transition-all duration-300">
                 Contact Us
               </Link>
             </div>

@@ -21,7 +21,7 @@ const involvementOptions = [
     title: 'Make a Donation',
     desc: 'Your financial contribution directly supports our programmes, from feeding initiatives to education scholarships. Every donation counts.',
     icon: Heart,
-    color: 'from-ytm-blue to-blue-600',
+    color: 'from-ytm-green to-teal-500',
     bgColor: 'bg-ytm-blue/5',
     actions: ['One-time donation', 'Monthly giving', 'Corporate sponsorship'],
     cta: 'Donate Now',
@@ -41,7 +41,7 @@ const involvementOptions = [
     title: 'Volunteer',
     desc: 'Share your time, skills, and passion. Volunteers are the backbone of our operations, from field work to administrative support.',
     icon: Users,
-    color: 'from-ytm-purple to-pink-500',
+    color: 'from-ytm-green to-teal-500',
     bgColor: 'bg-ytm-purple/5',
     actions: ['Field volunteers', 'Skill-based volunteering', 'Remote support'],
     cta: 'Join as Volunteer',
@@ -51,7 +51,7 @@ const involvementOptions = [
     title: 'Advocate',
     desc: 'Use your voice to raise awareness about the issues we address. Share our stories, engage your network, and help us reach more people.',
     icon: Megaphone,
-    color: 'from-orange-400 to-red-500',
+    color: 'from-ytm-green to-teal-500',
     bgColor: 'bg-orange-50',
     actions: ['Social media advocacy', 'Community mobilisation', 'Policy advocacy'],
     cta: 'Start Advocating',
@@ -66,6 +66,7 @@ const volunteerRoles = [
     commitment: 'Flexible',
     location: 'Lagos / Abuja',
     icon: MapPin,
+    image: '/images/field-volunteer.png',
   },
   {
     title: 'Skills Trainer',
@@ -73,6 +74,7 @@ const volunteerRoles = [
     commitment: 'Part-time',
     location: 'Multiple locations',
     icon: Zap,
+    image: '/images/skills-trainer.png',
   },
   {
     title: 'Education Mentor',
@@ -80,6 +82,7 @@ const volunteerRoles = [
     commitment: '2-4 hours/week',
     location: 'Remote / In-person',
     icon: BookOpen,
+    image: '/images/education-mentor.png',
   },
   {
     title: 'Communications Volunteer',
@@ -87,6 +90,7 @@ const volunteerRoles = [
     commitment: 'Flexible',
     location: 'Remote',
     icon: Megaphone,
+    image: '/images/communications-volunteer.png',
   },
 ]
 
@@ -200,25 +204,50 @@ export default function GetInvolved() {
                   selectedRole === i ? 'ring-2 ring-ytm-blue' : ''
                 }`}
               >
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-ytm-blue/10 flex items-center justify-center flex-shrink-0">
-                    <role.icon className="w-6 h-6 text-ytm-blue" />
-                  </div>
+<>
+  <div className="relative h-48 -m-6 mb-6 overflow-hidden rounded-t-3xl">
+    <img
+      src={role.image}
+      alt={role.title}
+      className="w-full h-full object-cover"
+      loading="lazy"
+    />
 
-                  <div className="flex-grow">
-                    <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-1">{role.title}</h3>
-                    <p className="text-ytm-dark/60 dark:text-white/50 text-sm mb-3">{role.desc}</p>
+    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+  </div>
 
-                    <div className="flex items-center gap-4 text-xs text-ytm-dark/50 dark:text-white/40">
-                      <span className="flex items-center gap-1">
-                        <Clock className="w-3 h-3" /> {role.commitment}
-                      </span>
-                      <span className="flex items-center gap-1">
-                        <MapPin className="w-3 h-3" /> {role.location}
-                      </span>
-                    </div>
-                  </div>
-                </div>
+  <div className="flex items-start gap-4">
+
+    <div className="w-12 h-12 rounded-xl bg-ytm-blue/10 flex items-center justify-center flex-shrink-0">
+      <role.icon className="w-6 h-6 text-ytm-blue" />
+    </div>
+
+    <div className="flex-grow">
+
+      <h3 className="text-lg font-outfit font-bold text-ytm-blue dark:text-white mb-1">
+        {role.title}
+      </h3>
+
+      <p className="text-ytm-dark/60 dark:text-white/50 text-sm mb-3">
+        {role.desc}
+      </p>
+
+      <div className="flex items-center gap-4 text-xs text-ytm-dark/50 dark:text-white/40">
+        <span className="flex items-center gap-1">
+          <Clock className="w-3 h-3" />
+          {role.commitment}
+        </span>
+
+        <span className="flex items-center gap-1">
+          <MapPin className="w-3 h-3" />
+          {role.location}
+        </span>
+      </div>
+
+    </div>
+
+  </div>
+</>
               </motion.div>
             ))}
           </div>
@@ -268,7 +297,7 @@ export default function GetInvolved() {
             >
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
                 <img
-                  src="/images/47760696-1e97-4339-8986-ba32825fe879.jpg"
+                  src="/images/partnership-opportunities.png"
                   alt="Partnership"
                   className="w-full h-[400px] object-cover"
                   loading="lazy"
@@ -285,7 +314,7 @@ export default function GetInvolved() {
                   <div>
                     <div className="text-sm text-ytm-dark/60 dark:text-white/60">Partnership enquiries</div>
                     <a href="mailto:partnerships@yourtomorrowfoundation.org" className="text-ytm-blue dark:text-ytm-green font-medium hover:underline">
-                      partnerships@ytf.org
+                      partnerships@yourtomorrowfoundation.org
                     </a>
                   </div>
                 </div>
@@ -296,7 +325,7 @@ export default function GetInvolved() {
       </section>
 
       {/* ===== CTA ===== */}
-      <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-purple">
+     {/*   <section className="py-20 lg:py-32 bg-gradient-to-r from-ytm-blue to-ytm-purple">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-white mb-6">
@@ -321,7 +350,7 @@ export default function GetInvolved() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section>*/}
     </>
   )
 }

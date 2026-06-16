@@ -1,5 +1,8 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
+import { supabase } from '@/lib/supabase'
+
 import Link from 'next/link'
 import {
   LayoutDashboard,
@@ -10,6 +13,15 @@ import {
 } from 'lucide-react'
 
 export default function AdminSidebar() {
+
+  const router = useRouter()
+
+const handleLogout = async () => {
+  await supabase.auth.signOut()
+
+  router.push('/admin/login')
+}
+
   return (
 
     <aside className="w-64 bg-ytm-blue text-white min-h-screen p-6">
@@ -59,7 +71,9 @@ export default function AdminSidebar() {
       </nav>
 
       <div className="mt-auto pt-10">
-        <button className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 w-full">
+        <button 
+        onClick={handleLogout}
+        className="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-white/10 w-full">
           <LogOut className="w-5 h-5" />
           Logout
         </button>

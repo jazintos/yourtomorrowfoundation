@@ -156,11 +156,33 @@ export default function Impact() {
               Creating <span className="text-gradient">Measurable</span> Change.
             </h1>
 
-            <p className="text-xl text-ytm-dark/70 dark:text-white/70 max-w-2xl leading-relaxed">
-              Through targeted programmes and community partnerships, we're building a
-              Nigeria where every person has the opportunity to thrive.
+            <p className="text-xl text-ytm-dark/70 dark:text-white/70 max-w-3xl leading-relaxed">
+            Through targeted programmes and community partnerships across Nigeria, we are creating opportunities for individuals, families and communities to thrive.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
+        <div className="section-padding">
+
+          <div className="max-w-5xl">
+
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-green/10 text-ytm-green text-sm font-medium mb-6">
+              <Heart className="w-4 h-4" />
+              Serve
+            </div>
+
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
+              Serving Communities With Purpose
+            </h2>
+
+            <p className="text-lg text-ytm-dark/70 dark:text-white/70 max-w-3xl leading-relaxed">
+              We exist to serve vulnerable individuals and communities through practical programmes focused on nutrition, education, empowerment and sustainable development. Every initiative is designed to restore dignity, unlock potential and create lasting change.
+            </p>
+
+          </div>
+
         </div>
       </section>
 
@@ -169,11 +191,10 @@ export default function Impact() {
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
-              What We Do
+              Our Four Key Areas of Impact
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
-              Four core areas of intervention designed to create holistic, lasting impact
-              in the communities we serve.
+              Four strategic focus areas through which we deliver measurable and sustainable impact across communities.
             </p>
           </motion.div>
 
@@ -222,7 +243,7 @@ export default function Impact() {
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             {programmes.map((prog, i) => (
               <motion.div
                 key={prog.title}
@@ -291,7 +312,7 @@ export default function Impact() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <motion.div {...fadeInUp}>
               <h2 className="text-4xl font-outfit font-bold text-ytm-blue dark:text-white mb-8">
-                Goals & Critical Success Factors
+                Critical Success Factors
               </h2>
 
               <div className="space-y-4">
@@ -334,7 +355,7 @@ export default function Impact() {
                     <Target className="w-6 h-6 text-ytm-dark" />
                   </div>
                   <div>
-                  <div className="text-sm font-medium text-ytm-dark dark:text-white">People Supported by 2027</div>
+                  <div className="text-sm font-medium text-ytm-dark dark:text-white">Projected Beneficiaries by 2027</div>
                     <div className="text-2xl font-outfit font-bold text-ytm-blue dark:text-ytm-green">100,000+</div>
                   </div>
                 </div>
@@ -344,8 +365,28 @@ export default function Impact() {
         </div>
       </section>
 
-      {/* ===== CTA ===== */}
+      {/* ===== RL RI ===== */}
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
+        <div className="section-padding">
+
+          <div className="max-w-4xl mx-auto text-center">
+
+            <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
+              Real Lives, Real Impact
+            </h2>
+
+            <p className="text-lg text-ytm-dark/70 dark:text-white/70 leading-relaxed">
+              Every meal served, every student supported and every community reached represents a life transformed. Behind every statistic is a story of hope, dignity and opportunity.
+            </p>
+
+          </div>
+
+        </div>
+      </section>
+
+      
+      {/* ===== CTA ===== */}
+    {/*  <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-6">
@@ -368,7 +409,7 @@ export default function Impact() {
             </div>
           </motion.div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }

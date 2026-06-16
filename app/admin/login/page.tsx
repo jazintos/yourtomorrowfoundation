@@ -15,22 +15,35 @@ export default function AdminLoginPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault()
-
+  
+    console.log('STEP 1')
+  
     setLoading(true)
     setError('')
-
-    const { error } = await supabase.auth.signInWithPassword({
+  
+    console.log('STEP 2')
+  
+    const result = await supabase.auth.signInWithPassword({
       email,
       password,
     })
-
-    if (error) {
-      setError(error.message)
+  
+    console.log('STEP 3')
+    console.log(result)
+  
+    if (result.error) {
+      console.log('STEP 4 ERROR')
+  
+      setError(result.error.message)
       setLoading(false)
       return
     }
-
-    router.push('/admin/dashboard')
+  
+    console.log('STEP 5 SUCCESS')
+  
+    //alert('LOGIN SUCCESSFUL')
+  
+    router.replace('/admin/dashboard')
   }
 
   return (
