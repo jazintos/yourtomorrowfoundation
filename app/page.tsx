@@ -4,16 +4,46 @@ import Link from 'next/link'
 import { motion } from 'framer-motion'
 import {
   Heart, GraduationCap, TrendingUp, HomeIcon, Users, Star,
-  ArrowRight, Target, Leaf, BookOpen, HandHeart, Globe, Sparkles, Newspaper
+  ArrowRight, Target, Leaf, BookOpen, HandHeart, Globe, Sparkles, Newspaper, FileSpreadsheet, Milestone
 } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 
 const sdgs = [
-  { num: '02', title: 'Zero Hunger', icon: Heart, color: 'from-amber-400 to-amber-600', desc: 'Ensuring nutritious meals reach vulnerable communities across Nigeria.' },
-  { num: '04', title: 'Quality Education', icon: GraduationCap, color: 'from-red-400 to-red-600', desc: 'Providing access to learning resources, scholarships, and educational support.' },
-  { num: '08', title: 'Economic Growth', icon: TrendingUp, color: 'from-ytm-blue to-blue-700', desc: 'Empowering youth and adults with vocational and entrepreneurial skills.' },
-  { num: '11', title: 'Sustainable Communities', icon: HomeIcon, color: 'from-orange-400 to-orange-600', desc: 'Building resilient communities through partnerships and inclusive development.' },
+  {
+    num: '01',
+    title: 'No Poverty',
+    image: '/images/E_SDG_PRINT-01.jpg',
+    desc: 'Supporting vulnerable individuals and families through welfare initiatives and sustainable empowerment programmes.',
+  },
+
+  {
+    num: '02',
+    title: 'Zero Hunger',
+    image: '/images/E_SDG_PRINT-02.jpg',
+    desc: 'Ensuring nutritious meals reach vulnerable communities across Nigeria.',
+  },
+
+  {
+    num: '03',
+    title: 'Good Health & Well-Being',
+    image: '/images/E_SDG_PRINT-03.jpg',
+    desc: 'Improving access to healthcare through medical outreaches and community wellness initiatives.',
+  },
+
+  {
+    num: '08',
+    title: 'Decent Work & Economic Growth',
+    image: '/images/E_SDG_PRINT-08.jpg',
+    desc: 'Empowering youth and adults with vocational, entrepreneurial and employability skills.',
+  },
+
+  {
+    num: '11',
+    title: 'Sustainable Cities & Communities',
+    image: '/images/E_SDG_PRINT-11.jpg',
+    desc: 'Building resilient communities through inclusion, partnerships and sustainable development.',
+  },
 ]
 
 const pillars = [
@@ -256,13 +286,13 @@ useEffect(() => {
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Our Priorities
             </h2>
-            <p className="text-lg text-ytm-dark/70 dark:text-white/70">
+            <p className="text-lg text-ytm-dark/70 dark:text-white/70 max-w-none whitespace-nowrap">
               We are committed to advancing the United Nations Sustainable Development Goals
               through targeted, measurable programmes.
             </p>
           </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {sdgs.map((sdg, i) => (
               <motion.div
                 key={sdg.num}
@@ -271,11 +301,17 @@ useEffect(() => {
                 whileHover={{ y: -8 }}
                 className="glass-card p-6 hover:shadow-2xl transition-all duration-500 group cursor-pointer"
               >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${sdg.color} flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <sdg.icon className="w-8 h-8 text-white" />
-                </div>
-                <span className="text-4xl font-outfit font-black text-ytm-blue/20 dark:text-white/10">SDG {sdg.num}</span>
-                <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mt-2 mb-2">{sdg.title}</h3>
+              <div className="rounded-2xl overflow-hidden mb-5 shadow-lg bg-white p-2">
+                <img
+                  src={sdg.image}
+                  alt={sdg.title}
+                  className="w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+              <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-3">
+                SDG {sdg.num} — {sdg.title}
+              </h3>
                 <p className="text-sm text-ytm-dark/60 dark:text-white/50 leading-relaxed">{sdg.desc}</p>
               </motion.div>
             ))}
@@ -283,10 +319,16 @@ useEffect(() => {
         </div>
       </section>
 
-      {/* ===== THREE PILLARS SECTION ===== */}
+      {/* ===== FOUR PILLARS SECTION ===== */}
       <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-blue/10 text-ytm-blue text-sm font-medium mb-6">
+            <Milestone className="w-4 h-4" />
+            Pillars
+          </div>
+
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Four Core Pillars
             </h2>
@@ -341,9 +383,16 @@ useEffect(() => {
 
 
       {/* ===== FEATURED PROGRAMMES SECTION ===== */}
-      <section className="py-20 lg:py-32 bg-white dark:bg-ytm-dark/50">
+      <section className="py-20 lg:py-32 bg-gradient-to-br from-ytm-blue/5 to-ytm-green/5 dark:from-ytm-blue/10 dark:to-ytm-green/10">
         <div className="section-padding">
+
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
+
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-blue/10 text-ytm-blue text-sm font-medium mb-6">
+            <FileSpreadsheet className="w-4 h-4" />
+            Programmes
+          </div>
+
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
               Featured Programmes
             </h2>
