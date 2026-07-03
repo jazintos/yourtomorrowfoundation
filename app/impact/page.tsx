@@ -21,7 +21,7 @@ const coreAreas = [
     title: 'Welfare & Nutrition',
     desc: 'Providing nutritious meals, food supplies, and essential welfare items to vulnerable populations including prison inmates, school children, and low-income families.',
     icon: Utensils,
-    color: 'from-amber-400 to-orange-500',
+    color: 'from-blue-400 to-teal-500',
     stats: '30,000+ meals served',
     image: '/images/1e0aebc4-f999-467b-af96-66bc180a6d83.jpg',
   },

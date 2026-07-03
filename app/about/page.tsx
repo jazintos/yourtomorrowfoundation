@@ -87,6 +87,43 @@ export default function About() {
             <motion.div {...fadeInUp}>
               <h2 className="text-4xl font-outfit font-bold text-ytm-blue dark:text-white mb-8">Our Purpose</h2>
               <div className="space-y-8">
+               
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-ytm-green/10 flex items-center justify-center flex-shrink-0">
+                    <Globe className="w-6 h-6 text-ytm-green" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Vision</h3>
+                    <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
+                      To redefine Africa's future by creating inclusive systems of opportunity where communities are empowered and prosperity is sustained across generations.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-ytm-green/10 flex items-center justify-center flex-shrink-0">
+                    <BookOpen className="w-6 h-6 text-ytm-green" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Mission</h3>
+                    <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
+                      To unlock human potential through education and nourishment while building sustainable communities that inspire growth and opportunity.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex gap-4">
+                  <div className="w-12 h-12 rounded-xl bg-ytm-teal/10 flex items-center justify-center flex-shrink-0">
+                    <Lightbulb className="w-6 h-6 text-ytm-teal" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Our Approach</h3>
+                    <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
+                      We combine direct intervention with capacity building, working hand-in-hand with communities to identify needs, co-design solutions, and implement sustainable programmes.
+                    </p>
+                  </div>
+                </div>
                 <div className="flex gap-4">
                   <div className="w-12 h-12 rounded-xl bg-ytm-blue/10 flex items-center justify-center flex-shrink-0">
                     <Target className="w-6 h-6 text-ytm-blue" />
@@ -103,39 +140,7 @@ export default function About() {
                     </ul>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-ytm-green/10 flex items-center justify-center flex-shrink-0">
-                    <BookOpen className="w-6 h-6 text-ytm-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Mission</h3>
-                    <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
-                      To unlock human potential through education and nourishment while building sustainable communities that inspire growth and opportunity.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-ytm-green/10 flex items-center justify-center flex-shrink-0">
-                    <Globe className="w-6 h-6 text-ytm-green" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Vision</h3>
-                    <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
-                      To redefine Africa's future by creating inclusive systems of opportunity where communities are empowered and prosperity is sustained across generations.
-                    </p>
-                  </div>
-                </div>
-                <div className="flex gap-4">
-                  <div className="w-12 h-12 rounded-xl bg-ytm-teal/10 flex items-center justify-center flex-shrink-0">
-                    <Lightbulb className="w-6 h-6 text-ytm-teal" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-outfit font-bold text-ytm-blue dark:text-white mb-2">Our Approach</h3>
-                    <p className="text-ytm-dark/70 dark:text-white/60 text-sm leading-relaxed">
-                      We combine direct intervention with capacity building, working hand-in-hand with communities to identify needs, co-design solutions, and implement sustainable programmes.
-                    </p>
-                  </div>
-                </div>
+
               </div>
             </motion.div>
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }} className="relative">

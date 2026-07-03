@@ -51,7 +51,7 @@ const pillars = [
     title: 'Learn',
     desc: 'Expanding access to quality education, mentorship, scholarships, and learning opportunities that empower individuals to reach their full potential.',
     icon: BookOpen,
-    color: 'bg-gradient-to-br from-ytm-blue to-blue-700',
+    color: 'bg-gradient-to-br from-ytm-blue to-ytm-green',
     image: '/images/school_kids.jpg',
   },
 
@@ -59,7 +59,7 @@ const pillars = [
     title: 'Work',
     desc: 'Equipping youth and adults with vocational skills, entrepreneurship support, and economic opportunities that foster independence and growth.',
     icon: TrendingUp,
-    color: 'bg-gradient-to-br from-ytm-green to-teal-500',
+    color: 'bg-gradient-to-br from-ytm-blue to-ytm-green',
     image: '/images/medical_outreach.jpg',
   },
 
@@ -67,7 +67,7 @@ const pillars = [
     title: 'Thrive',
     desc: 'Providing nutrition, healthcare support, welfare programmes, and humanitarian interventions that improve quality of life.',
     icon: Heart,
-    color: 'bg-gradient-to-br from-ytm-purple to-purple-600',
+    color: 'bg-gradient-to-br from-ytm-blue to-ytm-green',
     image: '/images/sustainable.jpg',
   },
 
@@ -248,7 +248,7 @@ useEffect(() => {
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl lg:text-5xl font-outfit font-bold text-ytm-blue dark:text-white mb-4">
-              Our Values
+              Our Core Values
             </h2>
             <p className="text-lg text-ytm-dark/70 dark:text-white/70">
               The principles that guide every decision we make and every action we take.
@@ -279,7 +279,7 @@ useEffect(() => {
       <section className="py-20 lg:py-32 bg-ytm-lavender/30 dark:bg-ytm-dark">
         <div className="section-padding">
           <motion.div {...fadeInUp} className="text-center max-w-3xl mx-auto mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-green/10 text-ytm-green text-sm font-medium mb-4">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ytm-blue/10 text-ytm-blue text-sm font-medium mb-4">
               <Globe className="w-4 h-4" />
               Aligned with Global Goals
             </div>

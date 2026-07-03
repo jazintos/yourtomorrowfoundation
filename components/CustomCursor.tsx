@@ -47,7 +47,7 @@ export default function CustomCursor() {
       }}
     >
       <img
-        src="/images/favicon.ico"  
+        src="/images/YTM_cursor_icon-1.png"  
         alt="Cursor"
         className="w-14 h-14 object-contain"
       />

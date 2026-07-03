@@ -87,7 +87,7 @@ Get Involved </Link> </div>
         </p>
 
         <div className="space-y-2 mb-6">
-          <div className="text-xs uppercase tracking-wider text-ytm-green font-semibold">
+          <div className="text-xs Lowercase tracking-wider text-ytm-green font-semibold">
             Registered Non-Profit Organisation
           </div>
 
