@@ -376,14 +376,14 @@ export default function Contact() {
             </h2>
 
             <p className="text-ytm-dark/70 dark:text-white/60 mb-8">
-              Your support, whether through donation, volunteering, or partnership,
+              Your support, whether through volunteering, or partnership,
               directly transforms lives across Nigeria.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/donate" className="pill-btn-primary">
+              <Link href="/get-involved" className="pill-btn-primary">
                 <Heart className="w-5 h-5 mr-2" />
-                Donate Now
+                Get Involved Now
               </Link>
 
               <Link href="/get-involved" className="pill-btn-outline">

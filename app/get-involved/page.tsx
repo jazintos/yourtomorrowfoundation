@@ -17,7 +17,7 @@ const fadeInUp = {
 }
 
 const involvementOptions = [
-  {
+ /* {
     title: 'Make a Donation',
     desc: 'Your financial contribution directly supports our programmes, from feeding initiatives to education scholarships. Every donation counts.',
     icon: Heart,
@@ -26,7 +26,7 @@ const involvementOptions = [
     actions: ['One-time donation', 'Monthly giving', 'Corporate sponsorship'],
     cta: 'Donate Now',
     link: '/donate',
-  },
+  }, **/
   {
     title: 'Partner With Us',
     desc: 'Collaborate with us as an organisation, government agency, or business. Together, we can amplify our impact and reach more communities.',

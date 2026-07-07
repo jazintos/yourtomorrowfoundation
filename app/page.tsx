@@ -165,12 +165,12 @@ useEffect(() => {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/donate"
+               <Link
+                  href="/get-involved"
                   className="pill-btn-primary text-lg font-bold"
                 >
                   <Heart className="w-5 h-5 mr-2" />
-                  Support Our Cause
+                  Get Involved
                 </Link>
 
                 <Link
@@ -554,7 +554,7 @@ useEffect(() => {
               Want to know more about how to donate, volunteer, or partner with us? 
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/donate" className="pill-btn-primary text-lg">
+              <Link href="/contact" className="pill-btn-primary text-lg">
                 <HandHeart className="w-5 h-5 mr-2" />
                 Contact Us
               </Link>

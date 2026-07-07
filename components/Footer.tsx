@@ -19,7 +19,7 @@ const quickLinks = [
 { label: 'News & Stories', path: '/news' },
 { label: 'Get Involved', path: '/get-involved' },
 { label: 'Contact Us', path: '/contact' },
-{ label: 'Donate', path: '/donate' },
+/*{ label: 'Donate', path: '/donate' }, **/
 ]
 
 const programmes = [
@@ -55,11 +55,15 @@ transition={{ duration: 0.6 }}
 > <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
 Be Part of the Change </h2> <p className="text-white/90 text-lg max-w-2xl mx-auto mb-8">
 Every contribution, big or small, helps us create lasting impact in Nigerian communities.
-Join us in building a brighter tomorrow. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center"> <Link
+Join us in building a brighter tomorrow. </p> 
+<div className="flex flex-col sm:flex-row gap-4 justify-center"> 
+        {/*  <Link
              href="/donate"
              className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-ytm-blue rounded-full font-semibold hover:bg-white/90 transition-all duration-300 hover:scale-105 shadow-xl"
            > <Heart className="w-5 h-5" />
-Donate Now </Link> <Link
+              Donate Now 
+           </Link> */}
+<Link
              href="/get-involved"
              className="inline-flex items-center justify-center gap-2 px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-ytm-blue transition-all duration-300"
            >

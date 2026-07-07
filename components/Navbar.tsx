@@ -95,13 +95,13 @@ export default function Navbar() {
               </button>
 
               {/* Donate Button - Desktop */}
-              <Link
+          {/*    <Link
                 href="/donate"
                 className="hidden md:inline-flex items-center gap-2 pill-btn-primary"
               >
                 <Heart className="w-4 h-4" />
                 Donate
-              </Link>
+              </Link> */}
 
               {/* Mobile Menu Button */}
               <button
@@ -151,13 +151,13 @@ export default function Navbar() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
               >
-                <Link
+             {/*   <Link
                   href="/donate"
                   className="pill-btn-primary text-lg mt-4"
                 >
                   <Heart className="w-5 h-5 mr-2" />
                   Donate Now
-                </Link>
+                  </Link> */}
               </motion.div>
             </div>
           </motion.div>
